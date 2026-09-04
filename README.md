@@ -3,7 +3,7 @@
 ### Building an isolated virtual lab for penetration testing and ethical hacking practice
 
 ![Skill](https://img.shields.io/badge/Skill-Cybersecurity-red) ![Ver](https://img.shields.io/badge/Ver-Virtualbox%20v7.2-blue)
-![Kali Linux](https://img.shields.io/badge/Kali%20Linux-v2026.2-orange) ![Skill](https://img.shields.io/badge/Skill-Linux-red) ![Network](https://img.shields.io/badge/Network-10.0.0.0%2F24-teal)
+![Kali Linux](https://img.shields.io/badge/Kali%20Linux-v2026.1-orange) ![Skill](https://img.shields.io/badge/Skill-Linux-red) ![Network](https://img.shields.io/badge/Network-10.0.0.0%2F24-teal)
 ![Penetration Testing](https://img.shields.io/badge/Penetration%20Testing-red) ![Skill](https://img.shields.io/badge/Skill-Virtualization-red) ![GitHub](https://img.shields.io/badge/GitHub-black?logo=github)
 
 ---
