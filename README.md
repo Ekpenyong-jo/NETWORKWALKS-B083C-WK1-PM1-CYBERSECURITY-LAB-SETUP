@@ -55,15 +55,15 @@ The lab runs entirely inside VirtualBox on a single host machine. All virtual ma
 
 | Component | Setting |
 |---|---|
-| 🖥️ Host OS | [Windows 10] |
-| 💾 Host RAM | [16 GB] |
-| ⚙️ Processor | [Intel Core i7] |
+| 🖥️ Host OS | [e.g. Windows 11] |
+| 💾 Host RAM | [e.g. 16 GB] |
+| ⚙️ Processor | [e.g. Intel Core i7] |
 | 🧩 Hypervisor | VirtualBox v7.2 |
-| 🛡️ Security OS | Kali Linux v2026.1 |
-| 💽 Kali RAM | [2048 MB] |
+| 🛡️ Security OS | Kali Linux v2026.2 |
+| 💽 Kali RAM | [e.g. 4 GB] |
 | 🌐 Virtual Network | NAT Network |
 | 📡 Network Address | 10.0.0.0/24 |
-| 🖧 Kali IP Address | 10.0.0.0.2/24 |
+| 🖧 Kali IP Address | 10.0.0.10 |
 | 🚪 Default Gateway | 10.0.0.1 |
 | 🔎 DNS Server | 8.8.8.8 |
 | 🧭 Future VM Range | 10.0.0.20 – 10.0.0.30 |
@@ -80,42 +80,45 @@ The lab runs entirely inside VirtualBox on a single host machine. All virtual ma
 
 3. **Create a NAT Network**
    In VirtualBox, go to **File → Tools → Network Manager** and create a new **NAT Network** with the subnet `10.0.0.0/24`. A NAT Network allows all VMs attached to it to communicate with each other and reach the internet, while keeping the lab isolated from the host's own network.
-   
    ![NAT Network Configuration](Screenshots/nat-network-configuration.PNG)
-
 
 4. **Import Kali Linux**
    The Kali Linux virtual machine was downloaded from the official Kali Linux website and imported into VirtualBox.
+   
+   Open VirtualBox → **File → Import Appliance**, select the extracted Kali Linux OVA file, and follow the import wizard. Once imported, the Kali Linux VM will appear in the VirtualBox dashboard ready to be configured.
 
    The VM network adapter was configured as follows:
+
    - Adapter 1
    - Attached to: NAT Network
    - Network:     NatNetwork
    - Adapter Type: Intel PRO/1000 MT Desktop
 
-   The VM was allocated:
-   - RAM: 2048 MB
-     
-   ![Imported Kali Linux](Screenshots/imported-kali.PNG)   
+  The VM was allocated:
+  - RAM: 2048 MB
+ ![Imported Kali Linux](Screenshots/imported-kali.PNG)   
 
 5. **Configure the Kali Linux Network**
-   Open the Kali Linux VM's **Settings → Network**, set the adapter to **NAT Network**, and select the `NAT Network' created in step 3. Boot the VM and assign it a static IP (`10.0.0.10`) within the `10.0.0.0/24` subnet so it has a consistent address every time the lab is used.
+   Open the Kali Linux VM's **Settings → Network**, set the adapter to **NAT Network**, and select the `NatNetwork` created in step 3. Boot the VM and assign it a static IP (`10.0.0.10`) within the `10.0.0.0/24` subnet so it has a consistent address every time the lab is used.
 
-  ![NAT Network Configuration](Screenshots/nat-network-configuration.PNG)
-  
+   ![Kali Linux Network Configuration](Screenshots/kali-network-configuration.PNG)
+
 6. **Create a Clean VM Snapshot**
-   Once Kali Linux is installed, configured, and confirmed working, a **snapshot** of the VM (**Machine → Take Snapshot**) was taken. This preserves a clean, known-good baseline that the lab can always be reverted to before or after testing.
+   Once Kali Linux is installed, configured, and confirmed working, take a **snapshot** of the VM (**Machine → Take Snapshot**). This preserves a clean, known-good baseline that the lab can always be reverted to before or after testing.
+   
 
 ---
 
 ## ✅ Lab Verification
-Test	Command	Expected Result
-Check IP Address	ip a show	Output shows the Kali VM's static IP correctly set to 10.0.0.10
-Test Gateway	ping 10.0.0.1	Replies received from the default gateway, confirming the route out of the subnet is reachable
-Test Internet Connectivity	ping google.com	Successful replies, confirming the Kali VM can reach the internet through the NAT Network
-Test DNS Resolution	nslookup google.com	Returns a valid IP address for the domain, confirming DNS is resolving correctly
-Verify Nmap	nmap 10.0.0.0/24	Target VM(s) appear as "up" and reachable on the subnet
-Verify Snapshot	Machine → Restore Snapshot	VM reverts cleanly to the saved baseline state with no configuration lost
+
+| Test | Command | Expected Result |
+|---|---|---|
+| 🌐 Check IP Address | `ip a` | Output shows the Kali VM's static IP correctly set to `10.0.0.10` |
+| 📡 Test Gateway | `ping 10.0.0.1` | Replies received from the default gateway, confirming the route out of the subnet is reachable |
+| 🌍 Test Internet Connectivity | `ping google.com` | Successful replies, confirming the Kali VM can reach the internet through the NAT Network |
+| 🔎 Test DNS Resolution | `nslookup google.com` | Returns a valid IP address for the domain, confirming DNS is resolving correctly |
+| 🧰 Verify Nmap | `nmap 10.0.0.0/24` | Target VM(s) appear as "up" and reachable on the subnet |
+| ♋ Verify Snapshot | Machine → Restore Snapshot | VM reverts cleanly to the saved baseline state with no configuration lost |
 
 ---
 
@@ -147,6 +150,7 @@ Verify Snapshot	Machine → Restore Snapshot	VM reverts cleanly to the saved bas
 | VirtualBox v7.2 | https://www.virtualbox.org/ |
 | Kali Linux v2026.2 | https://www.kali.org/ |
 | WinRAR x64-7.20 | https://www.win-rar.com/ |
+| Nmap | https://nmap.org/ |
 
 ---
 
@@ -159,14 +163,13 @@ This lab is for **educational purposes only**, built entirely within an isolated
 ## 👤 Author
 
 **Ekpenyong Peace**
-Cybersecurity Professional B083C 
-
-🔗 LinkedIn:
-https://www.linkedin.com/in/peace-ekpenyong-28a225153
+Cybersecurity Professional B082
+🔗 [LinkedIn](https://www.linkedin.com/in/peace-ekpenyong-28a225153)
 
 ---
 
 ## 🗂️ Project Information
 
-Program Name: Cybersecurity at NetworkWalks 
-Week: 01 |Project: Cybersecurity and Pentesting Lab Setup | Repository: GitHub 
+Program Name: Cybersecurity at NetworkWalks |
+Week: 01 | Project: Cybersecurity and Pentesting 
+Lab Setup |Repository: GitHub
