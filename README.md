@@ -109,13 +109,13 @@ The lab runs entirely inside VirtualBox on a single host machine. All virtual ma
 ---
 
 ## ✅ Lab Verification
-
-| Test | Command | Expected Result |
-|---|---|---|
-| VM network connectivity | `ping 10.0.0.20` | Replies received from the target VM, confirming the Kali VM can reach it over the NAT Network |
-| Internet access via NAT | `ping google.com` | Successful replies, confirming the Kali VM can reach the internet through the NAT Network |
-| Static IP verification | `ip addr show` | Output shows the Kali VM's static IP correctly set to `10.0.0.10` |
-| Snapshot restore | Machine → Restore Snapshot | VM reverts cleanly to the saved baseline state with no configuration lost |
+Test	Command	Expected Result
+Check IP Address	ip a show	Output shows the Kali VM's static IP correctly set to 10.0.0.10
+Test Gateway	ping 10.0.0.1	Replies received from the default gateway, confirming the route out of the subnet is reachable
+Test Internet Connectivity	ping google.com	Successful replies, confirming the Kali VM can reach the internet through the NAT Network
+Test DNS Resolution	nslookup google.com	Returns a valid IP address for the domain, confirming DNS is resolving correctly
+Verify Nmap	nmap 10.0.0.0/24	Target VM(s) appear as "up" and reachable on the subnet
+Verify Snapshot	Machine → Restore Snapshot	VM reverts cleanly to the saved baseline state with no configuration lost
 
 ---
 
