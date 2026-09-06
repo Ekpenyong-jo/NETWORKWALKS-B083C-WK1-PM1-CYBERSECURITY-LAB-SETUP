@@ -4,7 +4,7 @@
 
 ![Skill](https://img.shields.io/badge/Skill-Cybersecurity-red) ![Ver](https://img.shields.io/badge/Ver-Virtualbox%20v7.2-blue)
 ![Kali Linux](https://img.shields.io/badge/Kali%20Linux-v2026.1-orange) ![Skill](https://img.shields.io/badge/Skill-Linux-red) ![Network](https://img.shields.io/badge/Network-10.0.0.0%2F24-teal)
-![Penetration Testing](https://img.shields.io/badge/Penetration%20Testing-red) ![Skill](https://img.shields.io/badge/Skill-Virtualization-red) ![GitHub](https://img.shields.io/badge/GitHub-black?logo=github) ![NetworkWalks](https://img.shields.io/badge/NetworkWalks-red?logo=networkwalks) ![Ethical Hacking](https://img.shield.io/badge/Ethical%20Hacking-orange) ![Ekpenyong Peace](https://img.shields.io/badge/Ekpenyong%20Peace-red)
+![Penetration Testing](https://img.shields.io/badge/Penetration%20Testing-red) ![Skill](https://img.shields.io/badge/Skill-Virtualization-red) ![GitHub](https://img.shields.io/badge/GitHub-black?logo=github) ![NetworkWalks](https://img.shields.io/badge/NetworkWalks-red?logo=networkwalks) ![Ethical Hacking](https://img.shields.io/badge/Ethical%20Hacking-orange) ![Ekpenyong Peace](https://img.shields.io/badge/Ekpenyong%20Peace-red)
 
 ---
 
