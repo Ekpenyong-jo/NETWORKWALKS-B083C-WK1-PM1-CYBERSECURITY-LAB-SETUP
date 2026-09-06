@@ -38,7 +38,7 @@ The purpose of this lab is to create a **controlled, legal, and repeatable envir
 
 ## 🏗️ Lab Architecture
 
-![Lab Architecture](Screenshots/lab-architecture.PNG)
+![Lab Architecture](Screenshots/lab-architecture.png)
 
 The lab runs entirely inside VirtualBox on a single host machine. All virtual machines connect through a **VirtualBox NAT Network**, which lets the VMs communicate with each other and reach the internet (for updates and tool installation) while staying isolated from the host machine's local network.
 
