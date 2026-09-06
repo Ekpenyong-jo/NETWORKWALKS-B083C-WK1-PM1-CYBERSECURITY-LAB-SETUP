@@ -55,12 +55,12 @@ The lab runs entirely inside VirtualBox on a single host machine. All virtual ma
 
 | Component | Setting |
 |---|---|
-| 🖥️ Host OS | [e.g. Windows 11] |
-| 💾 Host RAM | [e.g. 16 GB] |
-| ⚙️ Processor | [e.g. Intel Core i7] |
+| 🖥️ Host OS | [Windows 11] |
+| 💾 Host RAM | [16 GB] |
+| ⚙️ Processor | [Intel Core i7] |
 | 🧩 Hypervisor | VirtualBox v7.2 |
 | 🛡️ Security OS | Kali Linux v2026.2 |
-| 💽 Kali RAM | [e.g. 4 GB] |
+| 💽 Kali RAM | [2048 MB] |
 | 🌐 Virtual Network | NAT Network |
 | 📡 Network Address | 10.0.0.0/24 |
 | 🖧 Kali IP Address | 10.0.0.10 |
