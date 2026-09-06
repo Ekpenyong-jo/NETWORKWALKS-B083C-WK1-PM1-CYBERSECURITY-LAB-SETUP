@@ -48,7 +48,7 @@ The lab runs entirely inside VirtualBox on a single host machine. All virtual ma
 
 | Component | Setting |
 |---|---|
-| 🖥️ Host OS | [Windows 11] |
+| 🖥️ Host OS | [Windows 10] |
 | 💾 Host RAM | [8 GB] |
 | ⚙️ Processor | [Intel Core i7] |
 | 🧩 Hypervisor | VirtualBox v7.2 |
