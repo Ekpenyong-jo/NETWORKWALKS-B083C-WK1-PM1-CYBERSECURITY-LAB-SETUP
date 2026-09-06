@@ -39,12 +39,7 @@ The purpose of this lab is to create a **controlled, legal, and repeatable envir
 ## 🏗️ Lab Architecture
 
 ```
-Host Machine
- └── VirtualBox
-      ├── Kali Linux (Attacker) — 10.0.0.10
-      ├── Target VM 1           — 10.0.0.20
-      └── Target VM 2           — 10.0.0.30
-      Network: NAT Network (10.0.0.0/24)
+![Lab Architecture](Screenshots/lab-architecture.PNG)
 ```
 
 The lab runs entirely inside VirtualBox on a single host machine. All virtual machines connect through a **VirtualBox NAT Network**, which lets the VMs communicate with each other and reach the internet (for updates and tool installation) while staying isolated from the host machine's local network.
@@ -56,7 +51,7 @@ The lab runs entirely inside VirtualBox on a single host machine. All virtual ma
 | Component | Setting |
 |---|---|
 | 🖥️ Host OS | [Windows 11] |
-| 💾 Host RAM | [16 GB] |
+| 💾 Host RAM | [8 GB] |
 | ⚙️ Processor | [Intel Core i7] |
 | 🧩 Hypervisor | VirtualBox v7.2 |
 | 🛡️ Security OS | Kali Linux v2026.2 |
